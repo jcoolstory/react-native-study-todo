@@ -14,11 +14,16 @@ class App extends Component {
       inputValue:'',
       todos:[],
       type:'All'
-    }
+    }    
 
     this.submitTodo = this.submitTodo.bind(this);
     this.toggleComplate = this.toggleComplate.bind(this);
-    this.deleteTodo = this.deleteTodo.bind(this);    
+    this.deleteTodo = this.deleteTodo.bind(this);
+    this.setType = this.setType.bind(this);
+  }
+
+  setType(type) {
+    this.setState( { type })
   }
 
   inputChange(inputValue) {
